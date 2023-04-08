@@ -1,7 +1,3 @@
-# Note_Taking_App
-Note taking app.
-
-
 Agenda:
 
 Create a Python Application For Connecting it with Database (MYSQL) to 
@@ -67,7 +63,7 @@ Deleted successfully. impo
 
 
 
-git
+
 
 
 
@@ -83,5 +79,3 @@ Create table Note ([Sr no] as int primary key, date as datetime,Note as varchar(
 Def db_create_db(connect):
 Query = “create database db_notes”
 	
-
-sda
