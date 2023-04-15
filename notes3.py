@@ -16,7 +16,7 @@ def connect():
 # create function to create a note
 def Create():
     connect()
-    sql_create = """INSERT INTO anime_list values (2, 'Inuyasha' , 203 , 2024-12-19);"""
+    sql_create = """INSERT INTO anime_list values (1, 'Inuyasha' , 203 , 2024-12-19);"""
     cursor.execute(sql_create)
 
     connection.commit()
@@ -26,7 +26,7 @@ def Create():
 # delete function to delete a note
 def delete():
     connect()
-    sql_Delete_query = """Delete from anime_list where id = 5;"""
+    sql_Delete_query = """Delete from anime_list where id = 1;"""
     cursor.execute(sql_Delete_query)
     connection.commit()
     print('number of rows deleted', cursor.rowcount)
