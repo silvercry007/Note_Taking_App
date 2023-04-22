@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
+import sys
 
 # CREATE TABLE anime_list (id int not null auto_increment primary key, name varchar(255), episode int, Release_Date date);
 
@@ -22,9 +23,9 @@ def showtable():
 def Create():
     connect()
     print(showtable()) 
-    new_name = str(input("Please Enter the Name of the anime :- "))
-    no_of_episodes = input("Please Enter the Number of Episodes :- ")
-    release_date = input("Please Enter the Release date of the Anime in 'YYYY-MM-DD' format :- ")
+    new_name = str(input("Please Enter the Name of the anime :- ")(sys.argv[2]))
+    no_of_episodes = input(("Please Enter the Number of Episodes :- ")(sys.argv[3]))
+    release_date = input(("Please Enter the Release date of the Anime in 'YYYY-MM-DD' format :- ")(sys.argv[4]))
     
     sql_create = """INSERT INTO anime_list (Name, No_of_episodes, Release_Date) values ('%s','%s','%s');"""
     data = (new_name, no_of_episodes, release_date)
@@ -58,7 +59,7 @@ def update():
     print("Record Updated successfully ")
     
 def main():
-    create_new = str(input("Would you like to Create, Update or delete note ? : - "))
+    create_new = str(input("Would you like to Create, Update or delete note ? : - ")(sys.argv[1]))
     if create_new == 'create':
         Create()
     elif create_new == 'update':
